@@ -1,0 +1,43 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+PROC_GLO_SetupForAct_Place((CHARACTER)S_LOW_RealHope_1947e869-a95d-43c6-81f7-b4c4f90d95ce, (TRIGGER)S_HoHFallback_A_68b8f1de-9875-47ad-a58f-1a2daac25545);
+KBSECTION
+IF
+TextEvent("tohope")
+AND
+GetHostCharacter(_Player)
+THEN
+TeleportTo(_Player, S_HoHFallback_A_68b8f1de-9875-47ad-a58f-1a2daac25545, "", 1, 1, 1, 1, 1);
+
+IF
+TextEvent("freehope")
+THEN
+PROC_LOW_HouseOfHope_SetHopeFree();
+
+IF
+TextEvent("hope")
+AND
+GetHostCharacter(_Player)
+THEN
+SetOnStage((CHARACTER)S_LOW_RealHope_1947e869-a95d-43c6-81f7-b4c4f90d95ce, 1);
+TeleportTo((CHARACTER)S_LOW_RealHope_1947e869-a95d-43c6-81f7-b4c4f90d95ce, _Player);
+
+IF
+TextEvent("withers")
+AND
+GetHostCharacter(_Player)
+THEN
+SetOnStage((CHARACTER)S_GLO_JergalAvatar_0133f2ad-e121-4590-b5f0-a79413919805, 1);
+TeleportTo((CHARACTER)S_GLO_JergalAvatar_0133f2ad-e121-4590-b5f0-a79413919805, _Player);
+
+IF
+TextEvent("dammon")
+AND
+GetHostCharacter(_Player)
+THEN
+SetOnStage((CHARACTER)S_DEN_Weaponsmith_e2ad06ec-8034-479a-9f69-b86faea6dc79, 1);
+TeleportTo((CHARACTER)S_DEN_Weaponsmith_e2ad06ec-8034-479a-9f69-b86faea6dc79, _Player);
+EXITSECTION
+
+ENDEXITSECTION

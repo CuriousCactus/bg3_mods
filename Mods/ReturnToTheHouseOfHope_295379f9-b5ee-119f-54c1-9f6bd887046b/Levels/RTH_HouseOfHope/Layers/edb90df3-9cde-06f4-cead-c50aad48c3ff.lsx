@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="7" revision="1" build="3"/>
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="ID" type="guid" value="edb90df3-9cde-06f4-cead-c50aad48c3ff"/>
+            <attribute id="LayerColor" type="int32" value="-1"/>
+            <attribute id="Name" type="LSString" value="FogVolumes"/>
+        </node>
+    </region>
+</save>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<save>
+    <version major="4" minor="7" revision="1" build="3"/>
+    <region id="MetaData">
+        <node id="root">
+            <attribute id="ID" type="guid" value="03e5b83a-68e6-8f2b-3a49-4c2ca82ae4b8"/>
+            <attribute id="LayerColor" type="int32" value="-1"/>
+            <attribute id="Name" type="LSString" value="Underside"/>
+        </node>
+    </region>
+</save>

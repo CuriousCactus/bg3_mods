@@ -1,0 +1,59 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+SetOnStage(CTT_Cured_Tree_000_383e18a7-8a40-46e5-969b-1c3aee87db6b, 0);
+KBSECTION
+//Make the tree curable if Mystic Carrion is dead
+IF
+DB_Dead(S_LOW_FatherCarrion_b003409c-364f-4065-94bf-7436001d890e)
+THEN
+SetOnStage(CTT_Cursed_Tree_000_fbf90417-2561-4f78-ad14-93b535194001, 0);
+SetOnStage(CTT_Cured_Tree_000_383e18a7-8a40-46e5-969b-1c3aee87db6b, 1);
+
+//Cure the tree if you cast plant growth on it
+//IF
+//GetSurfaceGroundAt(CTT_Cursed_Tree_93b8b28b-f099-4b3c-82e5-06ade633787e, "SurfaceOvergrowth")
+//THEN
+//SetOnStage(CTT_Cursed_Tree_000_fbf90417-2561-4f78-ad14-93b535194001, 0);
+//SetOnStage(CTT_Cured_Tree_000_383e18a7-8a40-46e5-969b-1c3aee87db6b, 1);
+
+//Debugging
+IF
+TextEvent("totree")
+AND
+GetHostCharacter(_Player)
+THEN
+TeleportTo(_Player, (TRIGGER)S_Debug_Teleport_LOW_PhilgravesMansion_8fb26c44-8cc9-4808-8055-4d0129c3d8ec);
+
+IF
+TextEvent("hidedeadtree")
+THEN
+SetOnStage(CTT_Cursed_Tree_000_fbf90417-2561-4f78-ad14-93b535194001, 0);
+
+IF
+TextEvent("hidelivetree")
+THEN
+SetOnStage(CTT_Cured_Tree_000_383e18a7-8a40-46e5-969b-1c3aee87db6b, 0);
+
+IF
+TextEvent("showdeadtree")
+THEN
+SetOnStage(CTT_Cursed_Tree_000_fbf90417-2561-4f78-ad14-93b535194001, 1);
+SetOnStage(CTT_Cured_Tree_000_383e18a7-8a40-46e5-969b-1c3aee87db6b, 0);
+
+IF
+TextEvent("showlivetree")
+THEN
+SetOnStage(CTT_Cursed_Tree_000_fbf90417-2561-4f78-ad14-93b535194001, 0);
+SetOnStage(CTT_Cured_Tree_000_383e18a7-8a40-46e5-969b-1c3aee87db6b, 1);
+
+IF
+TextEvent("getdebugbook")
+AND
+GetHostCharacter(_Player)
+THEN
+ToInventory(UNI_S_DebugBook_31ee023c-d151-40f6-917e-84066772783b, _Player, 1, 0, 1);
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "Act3b"
