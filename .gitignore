@@ -16,6 +16,8 @@ Editor/Mods/Shared*
 /Mods/ModBrowser*
 /Mods/Shared*
 /Mods/Story*
+/Mods/*/Story/log.txt
+/Mods/*/Story/story_orphanqueries*.txt
 /Projects/GustavDev
 /Public/Engine
 /Public/GustavDev
