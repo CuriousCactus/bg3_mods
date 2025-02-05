@@ -1,4 +1,8 @@
 *.pak
+*.dat
+*.raw
+*.osi
+*.div
 /Editor/*
 !Editor/Mods/
 Editor/Mods/Engine

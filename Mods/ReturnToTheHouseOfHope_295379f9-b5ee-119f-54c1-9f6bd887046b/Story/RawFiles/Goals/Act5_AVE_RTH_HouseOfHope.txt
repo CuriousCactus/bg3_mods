@@ -1,0 +1,14 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+IF
+DB_Players(_Player)
+THEN
+SetOnStage((CHARACTER)S_LOW_RealHope_1947e869-a95d-43c6-81f7-b4c4f90d95ce, 1);
+TeleportTo((CHARACTER)S_LOW_RealHope_1947e869-a95d-43c6-81f7-b4c4f90d95ce, _Player);
+EXITSECTION
+
+ENDEXITSECTION
+ParentTargetEdge "Act5"

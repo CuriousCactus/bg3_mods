@@ -1,9 +1,21 @@
 Version 1
 SubGoalCombiner SGC_AND
 INITSECTION
+DB_CheckLevelStart("RTH_HouseOfHope");
 
+DB_RegionSafeSpot("RTH_HouseOfHope", (TRIGGER)StartPoint_000__000_b49e57b2-640d-4434-9558-e3b3b8f192c9);
 KBSECTION
+IF
+LevelLoaded("RTH_HouseOfHope")
+THEN
+GoalCompleted;
 
+IF
+DB_CheckLevelStart("RTH_HouseOfHope")
+AND
+DB_CurrentLevel("RTH_HouseOfHope")
+THEN
+GoalCompleted;
 EXITSECTION
 
 ENDEXITSECTION
