@@ -17,8 +17,4 @@ Editor/Mods/Shared*
 /Public/GustavDev
 /Public/Shared*
 /Scripts
-# /Public/YourMod
-# /Mods/YourMod
-# /Editor/Mods/YourMod
-# /Projects/YourMod 
 .DS_Store
