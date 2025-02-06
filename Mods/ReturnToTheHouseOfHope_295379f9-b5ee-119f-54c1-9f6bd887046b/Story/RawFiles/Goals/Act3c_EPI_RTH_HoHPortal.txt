@@ -12,7 +12,7 @@ IF
 ReadyCheckPassed("EPI_Campfire_ToHoH_ReadyCheck")
 THEN
 PrepareLevelStartingDialog(1);
-PROC_TeleportPartiesTo((TRIGGER)S_HoHFallback_A_68b8f1de-9875-47ad-a58f-1a2daac25545, "");
+PROC_TeleportPartiesTo((TRIGGER)RTH_PortalFromEpilogue_0c5efc6c-e82d-41a7-ad2e-53793691a313, "");
 EXITSECTION
 
 ENDEXITSECTION
