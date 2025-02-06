@@ -8,6 +8,16 @@ DB_Players(_Player)
 THEN
 SetOnStage((CHARACTER)S_LOW_RealHope_1947e869-a95d-43c6-81f7-b4c4f90d95ce, 1);
 TeleportTo((CHARACTER)S_LOW_RealHope_1947e869-a95d-43c6-81f7-b4c4f90d95ce, _Player);
+PROC_SetRelationToPlayers((FACTION)Act3_LOW_HouseOfHope_Hope_1dfaf4ca-187c-4a62-8978-af235ca6ce9f, 100);
+RemoveStatus(S_LOW_RealHope_1947e869-a95d-43c6-81f7-b4c4f90d95ce, "LOW_HOH_HOPE_INFERNALPROTECTION", NULL_00000000-0000-0000-0000-000000000000);
+NOT DB_AD_Dialog(S_LOW_RealHope_1947e869-a95d-43c6-81f7-b4c4f90d95ce, (DIALOGRESOURCE)LOW_HouseOfHope_AD_RescueHope_ea00162c-9e0a-fea2-cc97-f969eae279b8);
+NOT DB_Dialogs((CHARACTER)S_LOW_RealHope_1947e869-a95d-43c6-81f7-b4c4f90d95ce, (DIALOGRESOURCE)LOW_HouseOfHope_Hope_789e111a-7402-9ea0-feca-7106a0889675);
+DB_Dialogs((CHARACTER)S_LOW_RealHope_1947e869-a95d-43c6-81f7-b4c4f90d95ce, (DIALOGRESOURCE)AVE_RealHope_9f06cb61-7467-49ef-2268-aaf20136b66a);
+SetFlag((FLAG)LOW_HouseOfHope_Event_AgreedToHelpHope_525e29e1-58c6-2320-aba9-832d0ca8ff33);
+SetFlag((FLAG)LOW_HouseOfHope_Event_HopeRescued_119342c6-2a7b-8c90-e96e-3f3a5930e91a);
+SetCanFight(S_LOW_RealHope_1947e869-a95d-43c6-81f7-b4c4f90d95ce, 1);
+SetCanJoinCombat(S_LOW_RealHope_1947e869-a95d-43c6-81f7-b4c4f90d95ce, 1);
+DB_LOW_HouseOfHope_HopeIsFree(1);
 EXITSECTION
 
 ENDEXITSECTION
