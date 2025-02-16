@@ -1,0 +1,12 @@
+Version 1
+SubGoalCombiner SGC_AND
+INITSECTION
+
+KBSECTION
+IF
+UseFinished(_Player, S_EPI_HoH_Portal_Mirror_A_d30b94d8-e1f4-465c-8aac-c874b87eb025, 1)
+THEN
+TeleportPartiesToLevelWithMovie("RTH_HouseOfHope", "", "");
+EXITSECTION
+
+ENDEXITSECTION

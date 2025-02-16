@@ -23,4 +23,5 @@ Editor/Mods/Shared*
 /Public/GustavDev
 /Public/Shared*
 /Scripts
+**/SelectionGroups
 .DS_Store

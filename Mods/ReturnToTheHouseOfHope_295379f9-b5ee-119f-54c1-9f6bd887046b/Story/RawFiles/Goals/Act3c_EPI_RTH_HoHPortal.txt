@@ -3,17 +3,22 @@ SubGoalCombiner SGC_AND
 INITSECTION
 
 KBSECTION
-IF
-UseFinished(_Player, (ITEM)S_EPI_HoH_Portal_Mirror_A_d30b94d8-e1f4-465c-8aac-c874b87eb025, 1)
-THEN
-ReadyCheckGlobal("EPI_Campfire_ToHoH_ReadyCheck", "EPI_Campfire_ToHoH_ReadyCheck", 0, (CHARACTER)_Player);
+//IF
+//UseFinished(_Player, (ITEM)S_EPI_HoH_Portal_Mirror_A_d30b94d8-e1f4-465c-8aac-c874b87eb025, 1)
+//THEN
+//ReadyCheckGlobal("EPI_Campfire_ToHoH_ReadyCheck", "EPI_Campfire_ToHoH_ReadyCheck", 0, (CHARACTER)_Player);
 
-IF
-ReadyCheckPassed("EPI_Campfire_ToHoH_ReadyCheck")
-THEN
-PrepareLevelStartingDialog(1);
-PROC_TeleportPartiesTo((TRIGGER)RTH_PortalFromEpilogue_0c5efc6c-e82d-41a7-ad2e-53793691a313, "");
+//IF
+//ReadyCheckPassed("EPI_Campfire_ToHoH_ReadyCheck")
+//THEN
+//PrepareLevelStartingDialog(1);
+//PROC_TeleportPartiesTo((TRIGGER)RTH_PortalFromEpilogue_0c5efc6c-e82d-41a7-ad2e-53793691a313, "");
+
+//IF
+//UseFinished(_Player, S_EPI_HoH_Portal_Mirror_A_d30b94d8-e1f4-465c-8aac-c874b87eb025, 1)
+//THEN
+//TeleportPartiesToLevelWithMovie("RTH_HouseOfHope", "", "");
 EXITSECTION
 
 ENDEXITSECTION
-ParentTargetEdge "Act3c_EPI"
+ParentTargetEdge "__Combat"
